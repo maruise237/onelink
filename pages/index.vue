@@ -27,39 +27,46 @@
           @click="prefillDemoData"
           class="h-12 flex items-center space-x-2 px-4 border-r text-xs font-medium bg-white text-slate-700"
         >
-          <span> Add demo data </span>
-          <icon name="mdi:code-json" class="h-4 w-4" />
+          <span> {{ $t('addDemoData') }} </span>
         </button>
         <button
           @click="publish"
           class="h-12 flex items-center space-x-2 px-4 border-r text-xs font-medium bg-white text-slate-700"
         >
-          <span> Publish </span>
-          <icon name="ph:paper-plane-tilt-bold" class="h-4 w-4" />
+          <span> {{ $t('publish') }} </span>
         </button>
         <a
           href="https://github.com/fayazara/onelink"
           target="_blank"
           class="h-12 flex items-center space-x-2 px-4 border-r text-xs font-medium bg-white text-slate-700"
         >
-          <span> Github </span>
-          <icon name="mdi:github" class="h-4 w-4" />
+          <span> {{ $t('github') }} </span>
         </a>
+        <div class="flex-1" />
+        <button
+          @click="toggleLang"
+          class="h-12 flex items-center space-x-2 px-4 border-l text-xs font-medium bg-white text-slate-700"
+        >
+          <span>{{ locale === 'en' ? 'Français' : 'English' }}</span>
+        </button>
       </div>
     </div>
     <app-form-preview :data="data" />
     <a
-      href="https://twitter.com/fayazara"
+      href="https://wa.me/237676634539"
       target="_blank"
-      class="absolute bottom-0 right-0 bg-white rounded-tl-lg shadow px-4 py-1 font-medium text-sm text-gray-500"
+      class="absolute bottom-4 right-4 bg-white rounded-lg shadow px-4 py-2 font-medium text-sm text-gray-600 hover:bg-gray-100"
     >
-      Made by Fayaz
+      Made by kamtech
     </a>
   </div>
 </template>
 
 <script setup>
 import { encodeData } from "../utils/transformer";
+import { useI18n } from 'vue-i18n';
+
+const { locale } = useI18n();
 const data = ref({
   n: "",
   d: "",
@@ -125,5 +132,9 @@ const publish = () => {
   navigator.clipboard.writeText(url).then(() => {
     alert("Link copied to clipboard");
   });
+};
+
+const toggleLang = () => {
+  locale.value = locale.value === 'en' ? 'fr' : 'en';
 };
 </script>
