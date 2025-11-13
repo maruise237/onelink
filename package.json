@@ -1,7 +1,7 @@
 {
   "private": true,
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "scripts": {
     "build": "nuxt build",
@@ -11,13 +11,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^3.2.0",
-    "@nuxtjs/tailwindcss": "^6.3.0",
-    "@tailwindcss/forms": "^0.5.3",
-    "@vueuse/core": "^9.12.0",
-    "@vueuse/nuxt": "^9.12.0",
-    "nuxt": "^3.1.1",
-    "nuxt-icon": "^0.2.10"
+    "@nuxtjs/color-mode": "*",
+    "@nuxtjs/tailwindcss": "*",
+    "@tailwindcss/forms": "*",
+    "@vueuse/core": "*",
+    "@vueuse/nuxt": "*",
+    "nuxt": "*"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.8",
