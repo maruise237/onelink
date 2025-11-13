@@ -53,7 +53,7 @@
     </div>
     <app-form-preview :data="data" />
     <a
-      href="https://wa.me/237676634539"
+      href="https://wa.me/237676634549"
       target="_blank"
       class="absolute bottom-4 right-4 bg-white rounded-lg shadow px-4 py-2 font-medium text-sm text-gray-600 hover:bg-gray-100"
     >
@@ -65,8 +65,9 @@
 <script setup>
 import { encodeData } from "../utils/transformer";
 import { useI18n } from 'vue-i18n';
+import { useLocale } from '#i18n';
 
-const { locale } = useI18n();
+const { locale, setLocale } = useI18n();
 const data = ref({
   n: "",
   d: "",
@@ -135,6 +136,6 @@ const publish = () => {
 };
 
 const toggleLang = () => {
-  locale.value = locale.value === 'en' ? 'fr' : 'en';
+  setLocale(locale.value === 'en' ? 'fr' : 'en');
 };
 </script>
