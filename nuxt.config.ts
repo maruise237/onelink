@@ -1,4 +1,4 @@
-export default ({
+export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@nuxtjs/i18n'],
     i18n: {
         locales: ['en', 'fr'],

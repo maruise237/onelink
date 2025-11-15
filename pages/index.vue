@@ -1,9 +1,10 @@
 <template>
-  <div class="h-screen grid grid-cols-3 divide-x">
-    <div class="col-span-2 h-screen flex flex-col bg-slate-100">
-      <div class="flex-1 overflow-y-auto p-8">
-        <app-form-profile
-          v-model:name="data.n"
+  <div class="h-screen grid grid-cols-3 divide-x bg-gray-50">
+    <div class="col-span-2 h-screen flex flex-col bg-slate-50">
+      <div class="flex-1 overflow-y-auto p-12">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <app-form-profile
+            v-model:name="data.n"
           v-model:desc="data.d"
           v-model:image="data.i"
         />
@@ -21,6 +22,9 @@
         />
         <app-form-hr />
         <app-form-links v-model="data.ls" />
+        <app-form-hr />
+        <app-form-theme v-model="data.theme" />
+        </div>
       </div>
       <div class="border-t bg-white flex items-center">
         <button
@@ -64,8 +68,6 @@
 
 <script setup>
 import { encodeData } from "../utils/transformer";
-import { useI18n } from 'vue-i18n';
-import { useLocale } from '#i18n';
 
 const { locale, setLocale } = useI18n();
 const data = ref({
@@ -82,6 +84,7 @@ const data = ref({
   w: "",
   y: "",
   ls: [],
+  theme: 'light',
 });
 
 const prefillDemoData = () => {

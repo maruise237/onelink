@@ -1,5 +1,11 @@
 <template>
-  <main class="p-4 bg-white h-full w-full space-y-8 pt-12 max-w-lg mx-auto">
+  <main
+    class="p-6 h-full w-full space-y-8 pt-12 max-w-lg mx-auto"
+    :class="{
+      'bg-gray-50 text-slate-800': theme === 'light',
+      'bg-gray-900 text-white': theme === 'dark',
+    }"
+  >
     <div class="text-center">
       <div
         v-if="acc.i"
@@ -23,12 +29,16 @@
           <svg
             class="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="#1877F2"
+            viewBox="0 0 40 40"
           >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm3.5 6H13V6h2.5V4h-4v6h4v2h-4v8h-2v-8H7v-2h2.5V6H7V4h4.5v2H14v2.5z"
-            />
+            <defs>
+              <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-277.375" y1="406.6018" x2="-277.375" y2="407.5726" gradientTransform="matrix(40 0 0 -39.7778 11115.001 16212.334)">
+                <stop offset="0" style="stop-color:#0062E0"/>
+                <stop offset="1" style="stop-color:#19AFFF"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#SVGID_1_)" d="M16.7,39.8C7.2,38.1,0,29.9,0,20C0,9,9,0,20,0s20,9,20,20c0,9.9-7.2,18.1-16.7,19.8l-1.1-0.9h-4.4L16.7,39.8z"/>
+            <path fill="#FFFFFF" d="M27.8,25.6l0.9-5.6h-5.3v-3.9c0-1.6,0.6-2.8,3-2.8h2.6V8.2c-1.4-0.2-3-0.4-4.4-0.4c-4.6,0-7.8,2.8-7.8,7.8V20h-5v5.6h5v14.1c1.1,0.2,2.2,0.3,3.3,0.3c1.1,0,2.2-0.1,3.3-0.3V25.6H27.8z"/>
           </svg>
         </a>
       </span>
@@ -37,12 +47,9 @@
           <svg
             class="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="#1DA1F2"
+            viewBox="0 0 300 271"
           >
-            <path
-              d="M22.46 6c-.8.35-1.65.58-2.5.68a4.37 4.37 0 0 0 1.9-2.4c-.88.52-1.85.9-2.88 1.1a4.36 4.36 0 0 0-7.44 3.97A12.39 12.39 0 0 1 3.32 5.1a4.36 4.36 0 0 0 1.35 5.82a4.32 4.32 0 0 1-2-.55v.05a4.36 4.36 0 0 0 3.5 4.27a4.41 4.41 0 0 1-1.97.07a4.36 4.36 0 0 0 4.07 3.03a8.77 8.77 0 0 1-5.4 1.86a8.9 8.9 0 0 1-1.04-.06a12.32 12.32 0 0 0 6.67 1.95c8 0 12.38-6.62 12.38-12.38c0-.19 0-.38-.01-.56a8.83 8.83 0 0 0 2.16-2.24z"
-            />
+            <path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"/>
           </svg>
         </a>
       </span>
@@ -92,12 +99,17 @@
           <svg
             class="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="#229ED9"
+            viewBox="0 0 32 32"
+            fill="none"
           >
-            <path
-              d="m9.417 15.181l.398 4.145c.298 2.522 1.77 3.125 3.48 2.064l3.396-3.353a2.404 2.404 0 0 0 .148-.124l4.282-3.953c2.096-1.942.593-4.962-2.126-5.467l-13.59-2.617C2.964 2.378.847 4.18.91 6.702l1.493 9.479c.073 2.523 1.83 3.03 3.498 1.999l3.518-2.001z"
-            />
+            <circle cx="16" cy="16" r="14" fill="url(#paint0_linear_87_7225)"/>
+            <path d="M22.9866 10.2088C23.1112 9.40332 22.3454 8.76755 21.6292 9.082L7.36482 15.3448C6.85123 15.5703 6.8888 16.3483 7.42147 16.5179L10.3631 17.4547C10.9246 17.6335 11.5325 17.541 12.0228 17.2023L18.655 12.6203C18.855 12.4821 19.073 12.7665 18.9021 12.9426L14.1281 17.8646C13.665 18.3421 13.7569 19.1512 14.314 19.5005L19.659 22.8523C20.2585 23.2282 21.0297 22.8506 21.1418 22.1261L22.9866 10.2088Z" fill="white"/>
+            <defs>
+              <linearGradient id="paint0_linear_87_7225" x1="16" y1="2" x2="16" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#37BBFE"/>
+                <stop offset="1" stop-color="#007DBB"/>
+              </linearGradient>
+            </defs>
           </svg>
         </a>
       </span>
@@ -186,6 +198,10 @@ const props = defineProps({
   acc: {
     type: Object,
     required: true,
+  },
+  theme: {
+    type: String,
+    default: 'light',
   },
 });
 
